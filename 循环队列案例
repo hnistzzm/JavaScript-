@@ -1,0 +1,19 @@
+ //击鼓传花游戏
+ function hotPotato(elementsList, num) {
+        const queue = new Queue(); //创建queue类
+        const elimitatedList = [];
+        for (let i = 0; i < elementsList.length; i++) {
+            queue.enqueue(elementsList[i]); //将elementsList里的数据放入队列
+        }
+        while (queue.size() > 1) {
+            for (let i = 0; i < num; i++) {
+                queue.enqueue(queue.dequeue()); //将队列开头移除一项，再将其添加到队列末尾
+            }
+            elimitatedList.push(queue.dequeue()); //将淘汰的人移除队列
+        }
+        return {
+            eliminated: elementsList,
+            winner: quee.dequeue() //只剩下一个人的时候，这个人就是胜者
+
+        };
+    }
