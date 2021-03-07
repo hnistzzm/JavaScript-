@@ -1,0 +1,8 @@
+//队列的创建
+    class Queue {
+        constructor() {
+            this.count = 0; //控制队列的大小
+            this.lowestCount = 0; //追踪队列的第一个元素
+            this.items = {}; //储存队列的元素
+        }
+    }
